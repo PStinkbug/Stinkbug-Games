@@ -11,8 +11,6 @@ let ball = { x: canvas.width/2, y: canvas.height/2, radius: 8, speedX: 4, speedY
 document.addEventListener("keydown", e => {
     if (e.key === "w") leftPaddleY -= paddleSpeed;
     if (e.key === "s") leftPaddleY += paddleSpeed;
-    if (e.key === "ArrowUp") rightPaddleY -= paddleSpeed;
-    if (e.key === "ArrowDown") rightPaddleY += paddleSpeed;
 });
 
 function draw() {
@@ -37,9 +35,15 @@ function update() {
     // Collisions with top/bottom
     if(ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height) ball.speedY *= -1;
 
-    // Collisions with paddles
+    // Collisions with left paddle
     if(ball.x - ball.radius < paddleWidth && ball.y > leftPaddleY && ball.y < leftPaddleY + paddleHeight) ball.speedX *= -1;
+
+    // Collisions with AI paddle
     if(ball.x + ball.radius > canvas.width - paddleWidth && ball.y > rightPaddleY && ball.y < rightPaddleY + paddleHeight) ball.speedX *= -1;
+
+    // AI paddle movement
+    if(rightPaddleY + paddleHeight/2 < ball.y) rightPaddleY += paddleSpeed;
+    else if(rightPaddleY + paddleHeight/2 > ball.y) rightPaddleY -= paddleSpeed;
 
     // Reset if out of bounds
     if(ball.x < 0 || ball.x > canvas.width) {
