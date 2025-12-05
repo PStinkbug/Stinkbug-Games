@@ -1,29 +1,84 @@
+/* Default theme variables */
+:root {
+    --bg: #101820;
+    --text: white;
+    --accent: #00eaff;
+    --card-bg: #1a1f29;
+}
+
+/* Neon Arcade */
+.theme-neon {
+    --bg: #050010;
+    --text: #ffffff;
+    --accent: #ff00ff;
+    --card-bg: #120022;
+}
+
+/* Retro Pixel */
+.theme-retro {
+    --bg: #2b2b2b;
+    --text: #f4f4a3;
+    --accent: #8fff00;
+    --card-bg: #3a3a3a;
+}
+
+/* Minimal Clean */
+.theme-clean {
+    --bg: #fafafa;
+    --text: #111;
+    --accent: #0066ff;
+    --card-bg: #eeeeee;
+}
+
+/* Dark Futuristic */
+.theme-future {
+    --bg: #0d1117;
+    --text: #c9d1d9;
+    --accent: #58a6ff;
+    --card-bg: #161b22;
+}
+
+/* GENERAL STYLES */
 body {
-    font-family: Arial;
-    background: #101820;
-    color: white;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
     margin: 0;
     padding: 0;
     text-align: center;
+    transition: 0.3s ease;
 }
 
 header {
-    background: #1a1f29;
-    padding: 20px;
+    background: var(--card-bg);
+    padding: 25px;
     font-size: 2rem;
-}
-
-a {
-    color: #00cfff;
-    text-decoration: none;
-    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent);
 }
 
 .game-list {
     margin-top: 40px;
 }
 
-.game-list a {
-    display: block;
-    margin: 15px;
+.game-card {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    margin: 20px auto;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.2s;
 }
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+select {
+    margin-top: 20px;
+    padding: 10px;
+    background: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--accent);
+}
+
