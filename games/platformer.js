@@ -2,14 +2,18 @@ const canvas = document.getElementById("platformer");
 const ctx = canvas.getContext("2d");
 
 // Player
-const player = { x: 50, y: 300, width: 30, height: 30, speedX: 4, speedY: 0, gravity: 0.7, jumpPower: -12, onGround: false };
+const player = { x: 50, y: 350, width: 30, height: 30, speedX: 4, speedY: 0, gravity: 0.7, jumpPower: -12, onGround: false };
 
 // Platforms
 const platforms = [
     { x: 0, y: 370, width: 600, height: 30 },
     { x: 150, y: 300, width: 100, height: 10 },
     { x: 300, y: 250, width: 120, height: 10 },
-    { x: 480, y: 200, width: 80, height: 10 }
+    { x: 480, y: 200, width: 80, height: 10 },
+    { x: 600, y: 300, width: 100, height: 10 },
+    { x: 750, y: 250, width: 120, height: 10 },
+    { x: 900, y: 200, width: 80, height: 10 },
+    { x: 1050, y: 150, width: 100, height: 10 }
 ];
 
 let keys = {};
