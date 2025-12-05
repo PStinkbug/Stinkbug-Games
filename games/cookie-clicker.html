@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        #cookie {
+            width: 150px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #score {
+            font-size: 2rem;
+            margin: 20px;
+            color: var(--accent);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background: var(--card-bg);
+            color: var(--text);
+            border: 2px solid var(--accent);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>Cookie Clicker</header>
+<div id="score">0 Cookies</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Chocolate_Chip_Cookie.png" id="cookie" alt="Cookie">
+
+<div>
+    <button id="autoClickerBtn">Buy Auto-Clicker (10 Cookies)</button>
+</div>
+
+<script src="cookie-clicker.js"></script>
+</body>
+</html>
