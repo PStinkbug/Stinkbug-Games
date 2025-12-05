@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+    background: #101820;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #1a1f29;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+a {
+    color: #00cfff;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.game-list {
+    margin-top: 40px;
+}
+
+.game-list a {
+    display: block;
+    margin: 15px;
+}
